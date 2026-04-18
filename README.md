@@ -1,66 +1,85 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# FlashLearn - Flashcard Learning System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📖 Giới thiệu (Introduction)
+**FlashLearn** là một hệ thống ứng dụng Web hỗ trợ học tập qua thẻ nhớ (Flashcard) được xây dựng trên nền tảng Laravel. Dự án cung cấp một giao diện chuyên nghiệp, gọn gàng và dễ sử dụng, giúp người dùng dễ dàng tạo, quản lý và ôn tập kiến thức một cách hiệu quả.
 
-## About Laravel
+## ✨ Tính năng nổi bật (Features)
+- **Quản lý Danh mục (Category Management):** Tổ chức flashcard theo từng chủ đề hoặc môn học.
+- **Quản lý Flashcard:** Thêm, sửa, xóa các thẻ nhớ với hỗ trợ định dạng xuống dòng chi tiết.
+- **Màn hình Học tập (Study Mode):** 
+  - Giao diện thẻ bài 3D có thể lật (Flip-card) tương tác trực quan.
+  - Theo dõi tiến độ học tập bằng thanh Progress Bar.
+  - Tính năng đánh dấu thẻ đã học ("Mark as Learned").
+  - Chức năng xáo trộn thẻ (Shuffle) để ôn tập ngẫu nhiên.
+- **Tìm kiếm & Lọc:** Tìm kiếm nội dung nhanh chóng và lọc flashcard theo danh mục tự động.
+- **Giao diện Responsive:** Thiết kế phẳng (Flat Design) chuẩn Enterprise, hoạt động tốt trên cả máy tính và điện thoại.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🛠 Công nghệ sử dụng (Tech Stack)
+- **Backend:** Laravel 9.x, PHP 8.0+
+- **Cơ sở dữ liệu:** MySQL
+- **Frontend:** Laravel Blade, CSS thuần (Vanilla CSS), JavaScript thuần
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Hướng dẫn Cài đặt & Chạy dự án (Installation & Setup)
 
-## Learning Laravel
+**Yêu cầu môi trường:**
+- Cài đặt XAMPP (chứa sẵn PHP 8.0+ và MySQL).
+- Cài đặt Composer.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Các bước thực hiện:**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. **Clone source code về máy**
+   ```bash
+   git clone https://github.com/HoangAnh411/flashcard.git
+   cd flashcard
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **Cài đặt các thư viện cần thiết**
+   ```bash
+   composer install
+   ```
 
-## Laravel Sponsors
+3. **Cấu hình môi trường (.env)**
+   Tạo file `.env` từ file mẫu có sẵn:
+   ```bash
+   copy .env.example .env
+   ```
+   Sau đó, mở file `.env` lên và cấu hình thông tin Database. Hãy đảm bảo bạn đã bật MySQL trong XAMPP và tạo sẵn một database trống tên là `flashcard_db`:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=flashcard_db
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+4. **Tạo mã khóa bảo mật (Application Key)**
+   ```bash
+   php artisan key:generate
+   ```
 
-### Premium Partners
+5. **Tạo bảng CSDL và nạp dữ liệu mẫu**
+   Lệnh này sẽ tự động tạo các bảng và chèn sẵn một số Danh mục, Flashcard để bạn test thử:
+   ```bash
+   php artisan migrate --seed
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+6. **Khởi động ứng dụng**
+   ```bash
+   php artisan serve
+   ```
+   Mở trình duyệt và truy cập vào địa chỉ: **http://127.0.0.1:8000**
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 💡 Hướng dẫn sử dụng (Usage Guide)
+1. **Tạo Danh mục:** Chọn menu `Categories` ở góc trên bên phải, nhấn `New Category` để tạo các chủ đề (vd: Tiếng Anh, Lịch sử, IT...).
+2. **Tạo Flashcard:** Chọn menu `Flashcards`, nhấn `New Flashcard`, điền câu hỏi, câu trả lời và chọn danh mục tương ứng.
+3. **Ôn tập (Study Mode):** 
+   - Từ màn hình Flashcards, nhấn nút `Study Mode`.
+   - Click chuột vào tấm thẻ trên màn hình để lật xem câu trả lời.
+   - Dùng các nút `Previous` / `Next` để chuyển thẻ.
+   - Nhấn `Mark as Learned` nếu bạn đã thuộc thẻ đó.
+   - Nhấn `Shuffle` để xáo trộn thứ tự các thẻ, giúp việc ôn tập không bị nhàm chán.
