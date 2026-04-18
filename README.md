@@ -1,9 +1,9 @@
 # FlashLearn - Flashcard Learning System
 
-## 📖 Giới thiệu (Introduction)
+## Giới thiệu (Introduction)
 **FlashLearn** là một hệ thống ứng dụng Web hỗ trợ học tập qua thẻ nhớ (Flashcard) được xây dựng trên nền tảng Laravel. Dự án cung cấp một giao diện chuyên nghiệp, gọn gàng và dễ sử dụng, giúp người dùng dễ dàng tạo, quản lý và ôn tập kiến thức một cách hiệu quả.
 
-## ✨ Tính năng nổi bật (Features)
+## Tính năng nổi bật (Features)
 - **Quản lý Danh mục (Category Management):** Tổ chức flashcard theo từng chủ đề hoặc môn học.
 - **Quản lý Flashcard:** Thêm, sửa, xóa các thẻ nhớ với hỗ trợ định dạng xuống dòng chi tiết.
 - **Màn hình Học tập (Study Mode):** 
@@ -21,7 +21,7 @@
 
 ---
 
-## 🚀 Hướng dẫn Cài đặt & Chạy dự án (Installation & Setup)
+## Hướng dẫn Cài đặt & Chạy dự án (Installation & Setup)
 
 **Yêu cầu môi trường:**
 - Cài đặt XAMPP (chứa sẵn PHP 8.0+ và MySQL).
@@ -74,7 +74,7 @@
 
 ---
 
-## 💡 Hướng dẫn sử dụng (Usage Guide)
+## Hướng dẫn sử dụng (Usage Guide)
 1. **Tạo Danh mục:** Chọn menu `Categories` ở góc trên bên phải, nhấn `New Category` để tạo các chủ đề (vd: Tiếng Anh, Lịch sử, IT...).
 2. **Tạo Flashcard:** Chọn menu `Flashcards`, nhấn `New Flashcard`, điền câu hỏi, câu trả lời và chọn danh mục tương ứng.
 3. **Ôn tập (Study Mode):** 
