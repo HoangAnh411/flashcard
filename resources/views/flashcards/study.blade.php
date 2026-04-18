@@ -167,7 +167,7 @@
 
     {{-- Category filter --}}
     <div class="card mb-2" style="padding: 0.5rem 1rem;">
-        <form method="GET" action="{{ route('flashcards.study') }}" class="flex flex-gap" style="align-items: center;" id="study-filter-form">
+        <form method="GET" action="{{ route('flashcards.study') }}" class="flex flex-gap flex-wrap" style="align-items: center;" id="study-filter-form">
             <label class="form-label" style="margin: 0; white-space: nowrap;">Category:</label>
             <select name="category_id" class="form-control" id="study-category-select" style="padding: 5px 10px; flex: 1;"
                     onchange="this.form.submit()">
@@ -178,6 +178,13 @@
                     </option>
                 @endforeach
             </select>
+            <label style="display: flex; align-items: center; gap: 6px; font-size: 0.8125rem; cursor: pointer; white-space: nowrap; margin: 0;">
+                <input type="checkbox" name="unlearned_only" value="1"
+                       {{ request('unlearned_only') ? 'checked' : '' }}
+                       onchange="this.form.submit()"
+                       style="cursor: pointer;">
+                Only unlearned
+            </label>
         </form>
     </div>
 

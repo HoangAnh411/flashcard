@@ -471,8 +471,12 @@
 
     <nav class="navbar">
         <div class="navbar-inner">
-            <a href="{{ route('flashcards.index') }}" class="navbar-brand">FlashLearn</a>
+            <a href="{{ route('dashboard') }}" class="navbar-brand">FlashLearn</a>
             <div class="navbar-links">
+                <a href="{{ route('dashboard') }}"
+                   class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                    Dashboard
+                </a>
                 <a href="{{ route('flashcards.index') }}"
                    class="{{ request()->routeIs('flashcards.index') || request()->routeIs('flashcards.create') || request()->routeIs('flashcards.edit') ? 'active' : '' }}">
                     Flashcards

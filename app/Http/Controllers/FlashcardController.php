@@ -31,6 +31,11 @@ class FlashcardController extends Controller
             $query->where('category_id', $request->category_id);
         }
 
+        // Status filter
+        if ($request->has('status') && $request->status !== null && $request->status !== '') {
+            $query->where('is_learned', $request->status === 'learned');
+        }
+
         $flashcards = $query->latest()->paginate(12);
         $categories = Category::withCount('flashcards')->get();
 
@@ -128,6 +133,11 @@ class FlashcardController extends Controller
         // Optional: filter by category
         if ($request->has('category_id') && $request->category_id !== null && $request->category_id !== '') {
             $query->where('category_id', $request->category_id);
+        }
+
+        // Optional: only unlearned cards
+        if ($request->has('unlearned_only') && $request->unlearned_only) {
+            $query->where('is_learned', false);
         }
 
         $flashcards = $query->get();

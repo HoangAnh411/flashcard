@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlashcardController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,8 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-// Home → redirect to flashcards
-Route::get('/', function () {
-    return redirect()->route('flashcards.index');
-});
+// Dashboard
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 // Flashcard routes
 Route::get('/flashcards/study', [FlashcardController::class, 'study'])->name('flashcards.study');

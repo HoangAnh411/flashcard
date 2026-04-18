@@ -34,6 +34,14 @@
                 @endforeach
             </select>
         </div>
+        <div style="min-width: 130px;">
+            <label class="form-label" style="margin-bottom: 4px;">Status</label>
+            <select name="status" class="form-control" id="select-status" style="padding: 6px 10px;" onchange="this.form.submit()">
+                <option value="">All Status</option>
+                <option value="learned" {{ request('status') == 'learned' ? 'selected' : '' }}>Learned</option>
+                <option value="learning" {{ request('status') == 'learning' ? 'selected' : '' }}>Learning</option>
+            </select>
+        </div>
     </form>
 </div>
 
@@ -57,7 +65,7 @@
                     <div class="flex flex-gap">
                         <a href="{{ route('flashcards.edit', $flashcard) }}" class="btn btn-secondary btn-sm" id="btn-edit-{{ $flashcard->id }}">Edit</a>
                         <button type="button" class="btn btn-danger btn-sm" id="btn-delete-{{ $flashcard->id }}"
-                                onclick="confirmDelete('{{ route('flashcards.destroy', $flashcard) }}')">
+                                onclick="confirmDelete('{{ route('flashcards.destroy', $flashcard) }}', 'Delete flashcard: &quot;{{ Str::limit($flashcard->question, 50) }}&quot;? This action cannot be undone.')">
                             Delete
                         </button>
                     </div>
