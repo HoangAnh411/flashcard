@@ -485,10 +485,6 @@
                    class="{{ request()->routeIs('categories.*') ? 'active' : '' }}">
                     Categories
                 </a>
-                <a href="{{ route('flashcards.study') }}"
-                   class="{{ request()->routeIs('flashcards.study') ? 'active' : '' }}">
-                    Study
-                </a>
             </div>
         </div>
     </nav>
