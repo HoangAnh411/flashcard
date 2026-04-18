@@ -1,12 +1,12 @@
 # FlashLearn - Flashcard Learning System
 
-## 📖 Giới thiệu (Introduction)
+## Giới thiệu (Introduction)
 
 **FlashLearn** là một hệ thống ứng dụng Web hỗ trợ học tập qua thẻ nhớ (Flashcard) được xây dựng trên nền tảng **Laravel 9**. Dự án cung cấp một giao diện chuyên nghiệp, gọn gàng và dễ sử dụng, giúp người dùng dễ dàng tạo, quản lý và ôn tập kiến thức một cách hiệu quả thông qua phương pháp học tập bằng thẻ nhớ.
 
 ---
 
-## ✨ Tính năng chính (Features)
+## Tính năng chính (Features)
 
 ### Dashboard (Trang tổng quan)
 - Hiển thị tổng quan số liệu: tổng số flashcard, số thẻ đã học, số thẻ chưa học, tổng danh mục.
@@ -60,7 +60,7 @@
 
 ---
 
-## 📁 Cấu trúc thư mục chính (Project Structure)
+## Cấu trúc thư mục chính (Project Structure)
 
 ```
 flashcard-app/
@@ -93,7 +93,7 @@ flashcard-app/
 
 ---
 
-## 🗄 Thiết kế Cơ sở dữ liệu (Database Design)
+## Thiết kế Cơ sở dữ liệu (Database Design)
 
 ### Bảng `categories`
 | Cột | Kiểu | Mô tả |
@@ -118,7 +118,7 @@ flashcard-app/
 
 ---
 
-## 🚀 Hướng dẫn Cài đặt & Chạy dự án (Installation & Setup)
+## Hướng dẫn Cài đặt & Chạy dự án (Installation & Setup)
 
 ### Yêu cầu môi trường
 - **XAMPP** (bao gồm PHP 8.0+ và MySQL)
@@ -180,7 +180,7 @@ Mở trình duyệt và truy cập: **http://127.0.0.1:8000**
 
 ---
 
-## 💡 Hướng dẫn sử dụng (Usage Guide)
+## Hướng dẫn sử dụng (Usage Guide)
 
 ### Trang Dashboard
 - Truy cập trang chủ để xem tổng quan tiến độ học tập.
@@ -207,7 +207,7 @@ Mở trình duyệt và truy cập: **http://127.0.0.1:8000**
 
 ---
 
-## 📝 Dữ liệu mẫu (Sample Data)
+## Dữ liệu mẫu (Sample Data)
 
 Sau khi chạy `php artisan migrate --seed`, hệ thống sẽ có sẵn:
 
