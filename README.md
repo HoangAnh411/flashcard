@@ -14,7 +14,7 @@
 - **Tìm kiếm & Lọc:** Tìm kiếm nội dung nhanh chóng và lọc flashcard theo danh mục tự động.
 - **Giao diện Responsive:** Thiết kế phẳng (Flat Design) chuẩn Enterprise, hoạt động tốt trên cả máy tính và điện thoại.
 
-## 🛠 Công nghệ sử dụng (Tech Stack)
+## Công nghệ sử dụng (Tech Stack)
 - **Backend:** Laravel 9.x, PHP 8.0+
 - **Cơ sở dữ liệu:** MySQL
 - **Frontend:** Laravel Blade, CSS thuần (Vanilla CSS), JavaScript thuần
