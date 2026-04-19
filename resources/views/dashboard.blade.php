@@ -60,16 +60,6 @@
 </div>
 @endif
 
-{{-- Quick Actions --}}
-<div class="card mt-2">
-    <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">Quick Actions</h3>
-    <div class="flex flex-gap flex-wrap">
-        <a href="{{ route('flashcards.study') }}" class="btn btn-primary">Start Studying</a>
-        <a href="{{ route('flashcards.create') }}" class="btn btn-secondary">Create Flashcard</a>
-        <a href="{{ route('categories.create') }}" class="btn btn-secondary">Create Category</a>
-    </div>
-</div>
-
 <style>
     .stats-grid {
         display: grid;
